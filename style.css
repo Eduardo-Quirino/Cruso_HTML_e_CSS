@@ -1,0 +1,152 @@
+:root{
+    --text-color:#e3e3e3;
+    --text-hover:#c2c2c2;
+    --text-dark:#333;
+    --background-color: #0e1724;
+    --table-odd-row:#1e2132;
+    --opacuty-black:rgba(255, 255, 255, 0.1);
+    --defsult-button:mediumblue;
+    --hover-button:darkblue;
+    --medium-text:20px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+button, input, textarea, td, li, label{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto Slab', serif;
+}
+/* Header-Menu */
+header{
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    padding:8px 32px ;
+    box-shadow:0px 1px 5px 0px var(--opacuty-black) ;
+}
+
+header h2{
+    margin: 0;
+}
+
+header nav a{
+    font-size: var(--medium-text);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.7s;
+}
+header nav a:hover{
+    color: var(--opacuty-black);
+}
+
+header nav a + a {
+    margin-left: 16px;
+}
+
+/* Main-Introdução*/
+main > *{
+    padding-top: 40px;
+    margin-top: -10px;
+}
+
+main, footer{
+    max-width: 960px;
+    margin: 0 auto;
+}
+main article ::after,
+main section ::after{
+content:'';
+display: block;
+width: 100%;
+height: 1px;
+background-color: var(--opacuty-black);
+}
+/* \tabela */
+table{
+    table-layout: fixed;
+width: 100%;
+border-collapse: collapse;   
+}
+th,td{
+    border: 1px solid var(--text-color);
+    padding: 8px;
+}
+tfoot th{
+    text-align: center;
+}
+thead th:nth-child(1){
+    width: 10%;
+}
+tbody td:nth-child(1){
+text-align: center;
+}
+thead th:nth-child(3){
+    width: 50%;
+}
+tbody tr:nth-child(odd){
+    background-color: var(--table-odd-row);
+}
+/* Section-Formulário Avaliação */
+section form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+section form div{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 18px;
+}
+input, select, textarea{
+    padding: 8px 16px;
+    border:  2px solid var(--text-color);
+    border-radius: 4px;
+    color:  var(--text-dark);
+    margin-top: 16px;
+}
+textarea{
+   resize: vertical; 
+   min-height: 33px;
+   max-height: 80px;
+}
+section form button{
+    border: none;
+    background-color: var(--defsult-button);
+    font-size: var(--text-color);
+    border-radius: 8px;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+section form button:hover{
+    background-color: var(--hover-button);
+}
+
+/* Mídia */
+.midias{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+footer p{
+    font-weight: bold;
+    font-size: var(--medium-text);
+}
+
